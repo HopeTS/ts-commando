@@ -1,0 +1,4 @@
+node_modules/
+public/dist/*
+src/server/index.js
+src/server/index.js.map
