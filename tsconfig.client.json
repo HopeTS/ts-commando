@@ -7,7 +7,8 @@
     "outDir": "public/dist",
     "baseUrl": "src/client",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": false
   },
   "include": ["src/client"],
   "exclude": ["node_modules", "src/server"]
