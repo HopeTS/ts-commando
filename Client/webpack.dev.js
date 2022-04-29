@@ -6,7 +6,10 @@ module.exports = {
   output: webpackCommon.output,
   resolve: webpackCommon.resolve,
   module: {
-    rules: [...webpackCommon.module.rules],
+    rules: [
+      ...webpackCommon.module.rules,
+      { test: /\.js$/, loader: "source-map-loader", enforce: "pre" },
+    ],
   },
   watch: true,
   watchOptions: {
