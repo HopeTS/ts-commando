@@ -1,1 +1,0 @@
-alert("client compiled");
