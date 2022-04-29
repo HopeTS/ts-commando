@@ -1,0 +1,21 @@
+const webpackCommon = require("./webpack.common");
+
+module.exports = {
+  mode: "development",
+  target: webpackCommon.target,
+  entry: webpackCommon.entry,
+  output: webpackCommon.output,
+  resolve: webpackCommon.resolve,
+  module: {
+    rules: [
+      ...webpackCommon.module.rules,
+      { test: /\.js$/, loader: "source-map-loader", enforce: "pre" },
+    ],
+  },
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 600,
+    ignored: /node_modules/,
+  },
+  plugins: [...webpackCommon.plugins],
+};
