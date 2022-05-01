@@ -6,9 +6,11 @@
     "lib": ["DOM", "DOM.Iterable", "ES6", "ScriptHost"],
     "sourceMap": true,
     "baseUrl": ".",
-    "outDir": "dist",
     "esModuleInterop": true
   },
   "include": ["."],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
