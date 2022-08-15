@@ -7,8 +7,11 @@
     "outDir": "public/dist",
     "baseUrl": "src",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@shared/*": ["../@Shared/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "../../Shared"],
   "exclude": ["node_modules"]
 }

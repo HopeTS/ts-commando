@@ -1,4 +1,5 @@
 const path = require("path");
+const TSConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -7,9 +8,17 @@ module.exports = {
     filename: "bundle.js",
   },
   resolve: {
-    roots: [path.resolve(__dirname, "src")],
+    roots: [
+      path.resolve(__dirname, "src"),
+      path.resolve(__dirname, "../Shared"),
+    ],
     extensions: [".ts", ".tsx", ".js"],
-    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    modules: [
+      path.resolve(__dirname, "src"),
+      "node_modules",
+      path.resolve(__dirname, "../Shared"),
+    ],
+    plugins: [new TSConfigWebpackPlugin()],
   },
   module: {
     rules: [
